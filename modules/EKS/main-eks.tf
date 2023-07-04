@@ -20,14 +20,3 @@ output "eks_cluster_endpoint" {
 
 # main.tf
 
-module "eks_cluster" {
-  source = "\variables"
-
-  aws_region         = var.aws_region
-  cluster_name       = var.cluster_name
-  cluster_role_arn   = var.cluster_role_arn
-  cluster_version    = var.cluster_version
-  subnet_ids         = var.subnet_ids
-  security_group_ids = var.security_group_ids
-  tags               = var.tags
-}
